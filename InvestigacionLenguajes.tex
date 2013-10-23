@@ -55,7 +55,7 @@
 \usepackage{listings} 
 %%% The "real" document content comes below...
 
-\title{Investigación de Lenguajes - LIP}
+\title{Investigación de Lenguajes - LIPS}
 \author{Rodrigo Castro\\Jorge Vergara\\Oswaldo Bayona}
 %\date{} % Activate to display a given date or no date (if empty),
          % otherwise the current date is printed 
@@ -67,6 +67,45 @@
 \section{Introducción}
 
 \section{Características}
+
+Es una familia de lenguajes que soporta la aplicación de varios estilos de programación 
+(multiparadigma) aunque prevalece la programación funcional completamente declarativa.\\
+
+El término programación declarativa se refiere al uso de sentencias con las cuáles se modela el
+problema pero no se especifica cómo resolverlo,  el computador es el encargado de encontrar 
+la solución utilizando inferencias matemáticas y lógicas, en contraste con la programación
+imperativa que requiere que el programador implemente la  solución del problema mediante
+algoritmos.\\
+
+Se lo utiliza principalmente para estudios en el área de la Inteligencia Artificial (AI)\\
+
+Es muy sencillo y elegante, la implementación de programas recursivos es mucho más fácil que en el lenguaje C.\\
+
+Las expresiones matemáticas o en general utilizan notación pre-fix por ejemplo:\\
+(4 + (5 / 7))  se expresa + 4 / (5  7)\\
+Se pueden declarar funciones y organizarlas en módulos, siguiendo el siguiente esquema:\\
+	(defun nombreDeLaFuncion (arg1, arg2, …,argn)”Comentarios” (  Cuerpo ) )\\
+
+Todas las variables son punteros, una característica representativa de LISP es que las variables 
+no existen como en otros lenguajes, aquí se llaman valores, representa los valores ubicándolos 
+en zonas específicas de la memoria (dependiendo de la ubicación se simbolizan los valores
+de cadenas y números), conceptualmente se considera que existen todas las representaciones
+numéricas y de cadenas en las zonas de la memoria.\\
+
+La memoria se constituye de dos partes: el diccionario de símbolos y la memoria de datos. \\
+Es interpretado, aunque en algunas versiones también es compilado.\\
+Sus tipos de datos átomos son: símbolos,  strings, enteros, reales, racionales, par; y los tipos de
+datos compuestos son las Listas; los símbolos se refieren a nombres; en LISP las cadenas de
+caracteres son tipos de dato primitivos; los pares o conses (cons cell) es un tipo de dato
+atómico que se usa para estructurar otros datos primitivos en forma de pares, incluso se 
+pueden agrupar otros pares y estructurar arboles binarios, su esquema es el siguiente 
+(car . cdr), donde “car” es el primer átomo del par y “cdr” el segundo átomo; por otra parte una 
+Lista es una estructura que se basa también en pares siendo más completa pero es más sencilla de entender. \\
+
+La memoria utiliza el mecanismo de recolección de basura, si un dato ya no es referenciado es
+llevado al recolector. \\
+Algunas versiones de LISP son: Emacs Lisp, Common Lisp, Scheme.\\
+
 
 
 \section{Historia}
