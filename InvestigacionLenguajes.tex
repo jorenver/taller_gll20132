@@ -55,8 +55,8 @@
 \usepackage{listings} 
 %%% The "real" document content comes below...
 
-\title{Investigación de Lenguajes - Pascal}
-\author{Rodrigo Castro}
+\title{Investigación de Lenguajes - LIP}
+\author{Rodrigo Castro\\Jorge Vergara\\Oswaldo Bayona}
 %\date{} % Activate to display a given date or no date (if empty),
          % otherwise the current date is printed 
 
@@ -73,60 +73,83 @@
 \section{Historia}
 
 
-\section{Tutorial de Instalación}
-Un interprete que podemos utilizar para programar en Lisp es DrRacket. Su instalacion es muy sencilla y rapida.
-El entorno de trabajo para programar en este lenguaje se puede apreciar en la Figura 5
-
-\begin{figure}[h]
-\centering
-    \includegraphics{imagenes_investigacion/paso_uno.jpg}
-\caption {}
-\label{Figura 1}
-\end{figure}
-
-\begin{figure}[h]
-\centering
-    \includegraphics{imagenes_investigacion/paso_dos.jpg}
-\caption { }
-\label{Figura 2}
-\end{figure}
-
-\begin{figure}[h]
-\centering
-    \includegraphics{imagenes_investigacion/paso_tres.jpg}
-\caption { }
-\label{Figura 3}
-\end{figure}
-
-\begin{figure}[h]
-\centering
-    \includegraphics{imagenes_investigacion/paso_cuatro.jpg}
-\caption { }
-\label{Figura 4}
-\end{figure}
 
 
-\begin{figure}[h]
-\centering
-    \includegraphics[width=450pts] {imagenes_investigacion/entorno.jpg}
-\caption {//Entorno de trabajo de DrRocket}
-\label{Figura 5}
-\end{figure}
 
 
-%\section{Hola Mundo y otros Programas Introductorios}
+\section{Hola Mundo y otros Programas Introductorios}
 
 
-%\lstset{language=Pascal}          % Set your language (you can change the language for each code-block optionally)
+%hola mundo
+\subsection{Hola Mundo}
+\lstset{language=LISP}          
 
-%\begin{lstlisting}[frame=single]  % Start your code-block
-%for i:=maxint to 0 do
-%begin
-%{ do nothing }
-%end;
-%Write('Case insensitive ');
-%Write('Pascal keywords.');
-%\end{lstlisting}
+%codigo
+\begin{lstlisting}[frame=single] 
+	(defun HolaMundo()
+		(print 'Hola Mundo')]
+
+\end{lstlisting}
+
+\subsection{Factorial}
+
+% calcular suma de una lista
+\lstset{language=LISP}          % Set your language (you can change the language for each code-block optionally)
+
+%codigo 
+\begin{lstlisting}[frame=single]
+	
+	;Calculo del factorial de un numero
+	(defun Factorial(n)
+		(cond( ( lessp n 2) 1)
+			(t  (* n  (Factorial(sub 1 n))] 
+\end{lstlisting}
+
+Como se puede ver la funcion factorial tiene una estructura recursiva, adiferencia de los lenguajes de pogramacion tradificionales que tienen sentencias especializadas para realizar iteraciones en LIP no contamos con esas herramientas.\\
+Descripcion de la funcion:
+1.- como paso base vemos si el numero ingresado es menor que 2 en este caso devolvemos 1
+2.-si el numero no es menor que 2 este numero lo multipilcamos por el factorial de n-1 
+
+\subsection{Calcular Media Aritmetica de una Lista}
+
+Para resolver este problema lo vamos a dividir en 3 funciones mas bacisas
+\\  \\
+La primera funcion que vamos a desarrolar es "Suma" que calcula la sumatoria de cada elemento de la lista
+% calcular suma de una lista
+\lstset{language=LISP}          % Set your language (you can change the language for each code-block optionally)
+
+%codigo 
+\begin{lstlisting}[frame=single]
+	
+	;Suma todos los elementos de una lista
+	(defun Suma(lista)
+		(cond((null lista) 0 )
+			((atom lista) lista)
+			(t  (+ (car lista) (suma (cdr lista))] 
+\end{lstlisting}
+
+Detallando un poco la funcion:\\
+1.- en el caso que la lista este vacia nuestra funcion devuelve 0 nuestro primer caso base\\
+2.- si nuestra lista es un atomo es decir un simple numero devolvemos la lista este seria otro caso base\\
+3.- en el caso que la lista aun tenga mas de 1 elemento tomamos el 1 elemento de la lista y lo sumamos al resto de elementos de la lista\\
+
+Como segunda parte desarrolarremos una funcion que cuente la cantidad de elementos que se encuentran en la lista
+
+% contar elementos de la lista
+\lstset{language=LISP}          % Set your language (you can change the language for each code-block optionally)
+
+%codigo 
+\begin{lstlisting}[frame=single]
+	
+	;cuenta los elementos de la lista
+	(defun Contar(lista)
+		(cond((null lista) 0 )
+			((atom lista) 1)
+			(t (addl (contar (cdr lista)] 
+\end{lstlisting}
+
+
+
 
 
 
