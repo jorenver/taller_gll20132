@@ -55,7 +55,7 @@
 \usepackage{listings} 
 %%% The "real" document content comes below...
 
-\title{Investigación de Lenguajes - LIPS}
+\title{Investigación de Lenguajes - LISP}
 \author{Rodrigo Castro\\Jorge Vergara\\Oswaldo Bayona}
 %\date{} % Activate to display a given date or no date (if empty),
          % otherwise the current date is printed 
@@ -66,8 +66,6 @@
 
 \section{Introducción}
 
-\section{Características}
-
 Es una familia de lenguajes que soporta la aplicación de varios estilos de programación 
 (multiparadigma) aunque prevalece la programación funcional completamente declarativa.\\
 
@@ -77,14 +75,20 @@ la solución utilizando inferencias matemáticas y lógicas, en contraste con la
 imperativa que requiere que el programador implemente la  solución del problema mediante
 algoritmos.\\
 
-Se lo utiliza principalmente para estudios en el área de la Inteligencia Artificial (AI)\\
+\section{Características}
 
-Es muy sencillo y elegante, la implementación de programas recursivos es mucho más fácil que en el lenguaje C.\\
+
+Se lo utiliza principalmente para estudios de la Inteligencia Artificial (AI), porque en ésta área
+se requiere que las maquinas razonen usando lógicas formales y varios símbolos, y esa es la especialidad de LISP
+ya que fue modelada de forma matemática.\\
+
 
 Las expresiones matemáticas o en general utilizan notación pre-fix por ejemplo:\\
 (4 + (5 / 7))  se expresa + 4 / (5  7)\\
 Se pueden declarar funciones y organizarlas en módulos, siguiendo el siguiente esquema:\\
 	(defun nombreDeLaFuncion (arg1, arg2, …,argn)”Comentarios” (  Cuerpo ) )\\
+	
+Es muy sencillo y elegante, la implementación de programas recursivos es mucho más fácil que en el lenguaje C.\\
 
 Todas las variables son punteros, una característica representativa de LISP es que las variables 
 no existen como en otros lenguajes, aquí se llaman valores, representa los valores ubicándolos 
@@ -93,14 +97,14 @@ de cadenas y números), conceptualmente se considera que existen todas las repre
 numéricas y de cadenas en las zonas de la memoria.\\
 
 La memoria se constituye de dos partes: el diccionario de símbolos y la memoria de datos. \\
-Es interpretado, aunque en algunas versiones también es compilado.\\
+Es interpretado, aunque en muy pocas versiones también es compilado.\\
 Sus tipos de datos átomos son: símbolos,  strings, enteros, reales, racionales, par; y los tipos de
 datos compuestos son las Listas; los símbolos se refieren a nombres; en LISP las cadenas de
 caracteres son tipos de dato primitivos; los pares o conses (cons cell) es un tipo de dato
 atómico que se usa para estructurar otros datos primitivos en forma de pares, incluso se 
 pueden agrupar otros pares y estructurar arboles binarios, su esquema es el siguiente 
 (car . cdr), donde “car” es el primer átomo del par y “cdr” el segundo átomo; por otra parte una 
-Lista es una estructura que se basa también en pares siendo más completa pero es más sencilla de entender. \\
+Lista es una estructura que se basa también en pares siendo más completa pero sencilla de entender. \\
 
 La memoria utiliza el mecanismo de recolección de basura, si un dato ya no es referenciado es
 llevado al recolector. \\
@@ -117,11 +121,13 @@ LISP (LISt Processing) fue el primer lenguaje desarrollado para estudiar la inte
 artificial, lo nuevo que introdujo este lenguaje como aporte a la historia fueron las estructuras
 de datos de árbol, el compilador auto-contenido, tipos dinámicos etc.\\
 
+
+
 En los años 70 la capacidad tecnológica en cuanto a hardware no estaba tan avanzada razón
 por la cual no era viable programar con LISP, haciendo de este lenguaje no tan popular y 
 limitando su uso solo para inteligencia artificial en máquinas especialmente diseñadas
-llamadas maquinas Lisp, posteriormente quedaron obsoletas y la popularidad de Lisp tuvo
-un incremento. \\
+llamadas maquinas Lisp, posteriormente quedaron obsoletas entonces la popularidad de Lisp tuvo
+un incremento porque ahora era factible la programación de  propósito general. \\
 
 A lo largo de los años fueron apareciendo nuevos dialectos de LISP, entre los cuales podemos
 mencionar a InterLISP, Franz Lisp,  ZetaLisp; debido a esta gran variedad, entre los años 1980 y 
@@ -244,9 +250,15 @@ Como segunda parte desarrolarremos una funcion que cuente la cantidad de element
 			(t (addl (contar (cdr lista)] 
 \end{lstlisting}
 
+\section{Bibliografía}
 
 
-
+http://www.davidam.com/docu/lisp/lisp2.pdf
+http://www.ii.uam.es/~fdiez/docencia/material/lisp0.pdf
+http://paulgraham.es/ensayos/lo-que-hizo-diferente-a-lisp.html
+http://es.wikipedia.org/wiki/Lisp
+http://es.wikibooks.org/wiki/Programaci%C3%B3n_en_LISP
+  
 
 
 \end{document}
