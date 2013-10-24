@@ -210,9 +210,9 @@ El entorno de trabajo para programar en este lenguaje se puede apreciar en la Fi
 \end{lstlisting}
 
 Como se puede ver la funcion factorial tiene una estructura recursiva, adiferencia de los lenguajes de pogramacion tradificionales que tienen sentencias especializadas para realizar iteraciones en LIP no contamos con esas herramientas.\\
-Descripcion de la funcion:
-1.- como paso base vemos si el numero ingresado es menor que 2 en este caso devolvemos 1
-2.-si el numero no es menor que 2 este numero lo multipilcamos por el factorial de n-1 
+Descripcion de la funcion:\\
+1.- como paso base vemos si el numero ingresado es menor que 2 devolvemos 1\\
+2.-si el numero no es menor que 2 este numero lo multipilcamos por el factorial de n-1 \\
 
 \subsection{Calcular Media Aritmetica de una Lista}
 
@@ -251,6 +251,24 @@ Como segunda parte desarrolarremos una funcion que cuente la cantidad de element
 			((atom lista) 1)
 			(t (addl (contar (cdr lista)] 
 \end{lstlisting}
+
+Para completar la solucion al problema implementaremos la ultima funcion que es una especie de funcion principal que pide numeros para una lista y pesenta el valor de la media aritmetica
+
+% calcular media aritmetica
+\lstset{language=LISP}          % Set your language (you can change the language for each code-block optionally)
+
+%codigo 
+\begin{lstlisting}[frame=single]
+	(defun Media() ;calcula la media aritmetica de una lista
+		(print 'introdusca la lista')
+		(setq lista (read))
+		(setq n (contar lista))
+		(setq media (/ (sumar lista) n))
+		(princ 'la media es = ' ' )
+		(print media)]
+\end{lstlisting}
+
+Esta funcion es mucha mas sencialla que las 2 anteriores lo unico que hacemos es pedir al usuario que introdusca una lista contamos cuantos elementos tiene con la funcion contar definida anteriormete, calculamos el valor de la suma de los elementos de la lista con la funcion suma, calculamos la media y la presentamos
 
 \section{Bibliografía}
 
